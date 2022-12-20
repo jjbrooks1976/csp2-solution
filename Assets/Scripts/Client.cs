@@ -236,11 +236,11 @@ public class Client : MonoBehaviour
 
         if (correctionSmoothing.isOn)
         {
-            this.positionError *= 0.9f;
+            this.positionError *= 0.1f;
             this.rotationError = Quaternion.Slerp(
                 this.rotationError,
                 Quaternion.identity,
-                0.1f);
+                0.9f);
         }
         else
         {
